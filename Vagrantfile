@@ -29,6 +29,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "golang-lab"
+  config.vm.network "forwarded_port", guest: 6677, host: 6677, auto_correct: true
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
   config.vm.network "private_network", ip: "192.168.13.50"
   config.ssh.forward_agent = true

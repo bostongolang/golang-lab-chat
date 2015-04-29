@@ -18,12 +18,25 @@ get your hands dirty by writing some real Go code.
 Other programming language experience and concepts (such as networking, etc) will be helpful. A good introduction to the basics of Go for people familiar with 
 other programming language is available at: [https://tour.golang.org](https://tour.golang.org). If you can get through this tour, you will be well-prepared for this meetup!
 
+
 ### Vagrant setup
 
 1. Install [Vagrant](http://www.vagrantup.com/downloads) for your platform.
-2. Clone this repository.
+2. Clone this repository into a directory
+  
+  ```bash
+  # open a terminal window and type:
+  $ git clone https://github.com/bostongolang/golang-lab-chat.git
+  ```
+
 3. Open a terminal window, and cd /path/to/this/repository.
-4. Type `vagrant up`. This will create a virtual machine with Ubuntu linux and Go 1.4 installed for the Vagrant user.
+
+  ```bash
+  # open a terminal window and type:
+  $ cd golang-lab-chat
+  ```
+
+4. From within the `golang-lab-chat` directory, type `vagrant up`. This will create a virtual machine with Ubuntu linux and Go 1.4 installed for the Vagrant user.
 5. Type `vagrant ssh` to ssh into the virtual machine.  
 
 Need help? Arrive a little early and we can help you get up-and-running, or join
