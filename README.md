@@ -26,7 +26,10 @@ other programming language is available at: [https://tour.golang.org](https://to
 4. Type `vagrant up`. This will create a virtual machine with Ubuntu linux and Go 1.4 installed for the Vagrant user.
 5. Type `vagrant ssh` to ssh into the virtual machine.  
 
-Need help? Arrive a little early and we can help you get up-and-running, or
+Need help? Arrive a little early and we can help you get up-and-running, or join
+the Boston Golang Slack group #lab-help channel group by signing up [here](http://bostongolang-slack-invite.herokuapp.com/).
+
+You can also email me directly: [jandre+bostongolang@gmail.com](mailto:jandre+bostongolang@gmail.com).
 
 
 ## Organization
