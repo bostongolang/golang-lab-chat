@@ -22,7 +22,7 @@ accept connections:
 	}
 ```
 
-1. Create an empty function `func handleConnection(conn net.Conn)` that
+1. Above the `main` function, create an empty function `func handleConnection(conn net.Conn)` that
 will handle the connection.
   
   Right after you accept the connection and print the 
@@ -46,9 +46,9 @@ will handle the connection.
 
   1. Prints "Enter your username: " on the socket.
   2. Reads the username in as a string from the socket.
-  3. Echos the username back on the socket to the user by printing "Welcome, <username>!"
+  3. Echos the username back on the socket to the user by printing "Welcome, [username]!"
 
-  Hint: make sure you call Flush() to the `writer` socket after writing to it.
+  Hint: make sure you call `Flush()` to the `writer` socket after writing to it.
 
 You should be able to verify everything is working correctly by `telnet localhost 6677`.
 
