@@ -23,7 +23,7 @@ this repository.
 1. Under this folder, Use your code editor to create a file `chat.go` that will contain your `main` function.  Write some
 code that will print "Chat server starting!".
 
-[See the solution!](lessons/code/01-setup/chat.go)
+[See the solution!](code/01-setup/chat.go)
 
 1. Ensure the code runs by typing `go run chat.go` 
 
