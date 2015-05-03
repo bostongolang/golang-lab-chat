@@ -16,19 +16,19 @@ this repository.
     mkdir -p chat-server
     ```
 
-  If you are using Vagrant, this will 'appear' in `/opt/golang-lab/chat-server`.
+  tip: If you are using Vagrant, this will 'appear' in `/opt/golang-lab/chat-server`.
+  The /opt/golang-lab folder is shared from the repository folder in your host operating
+  system, so any changes you make will be reflected.
 
-1. Under this folder, create a file `chat.go` that will contain your `main` function.  Write some
-code that will print "Chat server starting!" 
+1. Under this folder, Use your code editor to create a file `chat.go` that will contain your `main` function.  Write some
+code that will print "Chat server starting!".
 
->!  ```go
->!  package main
->!  
->!  func main() {
->!    fmt.Println("Chat server starting!")    
->!  }
->!  
->!  ```
+[See the solution!](lessons/code/01-setup/chat.go)
 
 1. Ensure the code runs by typing `go run chat.go` 
+
+```bash
+cd /opt/golang-lab # if using vagrant
+go run chat.go
+```
 
