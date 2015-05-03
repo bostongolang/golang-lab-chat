@@ -32,3 +32,7 @@ cd /opt/golang-lab-chat # if using vagrant
 go run chat.go
 ```
 
+
+
+[Proceed to Lesson 2](02-socket.md)
+

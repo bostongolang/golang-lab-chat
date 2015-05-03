@@ -35,5 +35,9 @@ server will listen for connections.
   
   ```
 
-[Stuck on any of the steps above? See the solution!](code/02-socket/chat.go)
+  [Stuck on any of the steps above? See the solution!](code/02-socket/chat.go)
 
+  Restart the server using `go run chat.go`.
+
+
+[Proceed to Lesson 3](03-user-input.md)
