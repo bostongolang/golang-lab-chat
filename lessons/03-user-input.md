@@ -45,7 +45,7 @@ will handle the connection.
 1. Using the reader and writer we just created, write some code in `handleConnection` that does the following:
 
   1. Prints "Enter your username: " on the socket.
-  2. Reads the username in as a string from the socket.
+  2. Reads the username from the user connected to the socket.
   3. Echos the username back on the socket to the user by printing "Welcome, [username]!"
 
   Hint: make sure you call `Flush()` to the `writer` socket after writing to it.
