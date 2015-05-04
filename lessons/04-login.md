@@ -96,7 +96,8 @@ username and store it on the `ChatUser.username` field.
   
     1. :star2: Will print to the socket "Please enter your username:";
     1. :star2: Read the username from the socket using `cu.ReadLine`;
-    1. :star2: And write back to the socket "Welcome, [username]".
+    1. :star2: Store the read username on the `cu.username` field;
+    1. :star2: And write back to the socket "Welcome, [cu.username]".
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
