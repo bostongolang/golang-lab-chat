@@ -7,15 +7,17 @@ server will listen for connections.
 
 ## Steps
 
-1. Add some code to chat.go that creates a socket to bind all interfaces to TCP port 6677.
 
-  In your `chat.go` file, use the `net.Listen` function [docs here](http://golang.org/pkg/net/#Listen) 
-  to createa listener that binds to TCP port `6677`.  
+1. Open your `chat.go` file and find the `main` function.
+
+  1. Use the `net.Listen` function [docs here](http://golang.org/pkg/net/#Listen) 
+  to create a listener that binds to TCP port `6677`.  
+
+  1. Create a new instance of the chatroom using NewChatRoom() and call
+  `chatroom.ListenForMessages()`
   
-  Ensure the code runs by typing `go run chat.go` .
-
-1. Write some code that will listen for accepted connections on port
-6677, and print out the remote address of the connection.
+  1. Write some code that will loop listen for accepted connections on port
+  6677, and print out the remote address of the connection.
 
   Use the `listener.Accept()` function to accept connections and print
   the remote address when the connection is joined.   You
@@ -23,21 +25,9 @@ server will listen for connections.
   
   [Docs for the net package and example are here](http://golang.org/pkg/net/)
   
-  In pseudocode, this looks like this:
-  
-  ```
-  listener = listen for socket
-  
-  while (true) {
-    connection = accept connection using listener.Accept()
-    log("got connection from " - connection.RemoteAddr())
-  }
-  
-  ```
+[Stuck on any of the steps above? See the solution!](code/02-socket/chat.go)
 
-  [Stuck on any of the steps above? See the solution!](code/02-socket/chat.go)
-
-  Restart the server using `go run chat.go`.
-
+1. Run the server using `go run chat.go`.  It should wait after the "Chat server starting!" message. 
+You can stop the server using CTRL-C.
 
 [Proceed to Lesson 3](03-user-input.md)

@@ -11,8 +11,8 @@ type ChatRoom struct {
 
 // NewChatRoom will create a chatroom
 func NewChatRoom() *ChatRoom {
-	// TODO: return a chatroom
-	return nil
+	// TODO: initialize struct members
+	return &ChatRoom{}
 }
 
 func (cr *ChatRoom) ListenForMessages()     {}
@@ -25,8 +25,8 @@ type ChatUser struct {
 }
 
 func NewChatUser(conn net.Conn) *ChatUser {
-	// TODO: return a chat user
-	return nil
+	// TODO: initialize chat user
+	return &ChatUser{}
 }
 
 func (cu *ChatUser) ReadIncomingMessages(chatroom *ChatRoom) {
@@ -69,5 +69,5 @@ func (cu *ChatUser) Close() {
 //
 func main() {
 	log.Println("Chat server starting!")
-	// TODO
+	// TODO add other logic
 }
