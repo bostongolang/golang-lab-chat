@@ -37,6 +37,8 @@ func (cr *ChatRoom) ListenForMessages() {
 	go func() {
 		for {
 			select {
+			case msg := <-cr.incoming:
+				cr.Broadcast(msg)
 			case user := <-cr.joins:
 				cr.users[user.username] = user
 				cr.Broadcast("*** " + user.username + " just joined the chatroom")
@@ -96,7 +98,14 @@ func NewChatUser(conn net.Conn) *ChatUser {
 }
 
 func (cu *ChatUser) ReadIncomingMessages(chatroom *ChatRoom) {
-	// TODO: read incoming messages in a loop
+	go func() {
+		for {
+			line, _ := cu.ReadLine()
+			if line != "" {
+				chatroom.incoming <- ("[" + cu.username + "] " + line)
+			}
+		}
+	}()
 }
 
 func (cu *ChatUser) WriteOutgoingMessages(chatroom *ChatRoom) {
@@ -126,6 +135,7 @@ func (cu *ChatUser) Login(chatroom *ChatRoom) error {
 	cu.WriteString("Welcome, " + cu.username + "\n")
 
 	cu.WriteOutgoingMessages(chatroom)
+	cu.ReadIncomingMessages(chatroom)
 	return nil
 }
 

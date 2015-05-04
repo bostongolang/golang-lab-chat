@@ -108,4 +108,4 @@ try connecting with multiple simultaneous clients to make sure you see the join 
     *** funcuddles just joined the chatroom
     ```
 
-[Finally! Let's chat!  Proceed to Lesson 6](06.md)
+[Finally! Let's chat!  Proceed to Lesson 6](06-broadcast-msgs.md)
