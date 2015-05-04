@@ -58,7 +58,7 @@ func (cr *ChatRoom) ListenForMessages() {
 				if cr.users[username] != nil {
 					cr.users[username].Close()
 					delete(cr.users, username)
-					cr.Broadcast("*** " + username + " disconnected")
+					cr.Broadcast("*** " + username + " has disconnected")
 				}
 			}
 		}
