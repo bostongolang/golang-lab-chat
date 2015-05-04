@@ -1,4 +1,4 @@
-# Lesson 5 - Handling Chatroom Joins 
+# Lesson 5 - Handling Chatroom Joins (15-20 minutes)
 
 ## Goals
 
@@ -40,8 +40,7 @@ So, let's go!
   `joins` channel!
 
   1. In `ChatRoom.ListenForMessages`, implement the following
-      * :star2: Create a `for/select` loop 
-      * :star2: Ensure this loop runs in a goroutine.
+      * :star2: Create a `for/select` loop, and ensure this loop runs in a goroutine.
       * :star2: In the loop, receive a `ChatUser` object on the `cr.joins` channel. Store it in the `users` map by its username.
    
     [Stuck on any of the steps above? Ask your TA, or see the solution!](code/05-handle-joins/chat.go)
