@@ -23,10 +23,10 @@ on each connection.  Find the section of the code `ChatRoom.Join`
   func (cr *ChatRoom) Join(conn net.Conn)     {}
   ```
 
-  1. In `ChatRoom.Join`, do the following: 
-    * Create a new `ChatUser` object using `NewChatUser` 
-    * Call `ChatUser.Login` on this object (and verify there is no error)
-    * Notify of a new user by putting the newly created `ChatUser` object on the `ChatRoom.joins` channel. 
+  1. In `ChatRoom.Join`, write the code that adoes the following: 
+    * :star2: Create a new `ChatUser` object using `NewChatUser` 
+    * :star2: Call `ChatUser.Login` on this object (and verify there is no error)
+    * :star2: Notify of a new user by putting the newly created `ChatUser` object on the `ChatRoom.joins` channel. 
     Don't worry about how this is used for now, I'll show you how we consume it later.
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
