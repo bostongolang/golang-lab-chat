@@ -128,5 +128,4 @@ happens if more than one client tries to connect?
 
   :star2: How can you fix this? Update `main` accordingly.
   
-
-[Proceed to Lesson 5](04-user-struct.md)
+[Proceed to Lesson 5](05-handle-joins.md)
