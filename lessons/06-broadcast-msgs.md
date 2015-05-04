@@ -86,4 +86,4 @@ multiple simultaneous clients to test how messages look to other users.
    [funcuddles] hello this is dog
    ```
 
-[Next lesson - Report disconnects](07-disconnects.md)
+[Next lesson - Handle user disconnects](07-disconnects.md)
