@@ -22,9 +22,7 @@ listen for connections.
 
   hint: Use the `listener.Accept()` function to accept connections and print
   the remote address when the connection is joined.   You
-  can use the `RemoteAddr()` function on `net.Conn` to do this.
-  
-  [Docs for the net package and example are here](http://golang.org/pkg/net/)
+  can use the `RemoteAddr()` function on `net.Conn` to do this.  [Docs for the net package and example are here](http://golang.org/pkg/net/)
   
   [Stuck on any of the steps above? Ask your TA, or see the solution!](code/02-socket/chat.go##L70-L94)
 
