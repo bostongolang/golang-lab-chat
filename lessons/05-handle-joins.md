@@ -8,12 +8,14 @@ In the previous lesson, we implemented `ChatRoom.Join` which placed a newly crea
 `ChatUser` object on the `joins` channel. 
 
 What we *want* to do is to be able to track all of the users in the `ChatRoom.users`
-map, so that we can relay the messages received to the other user sockets.
+map, so we can tell the other users when new users have joined, and also make sure
+we can broadcast messages correctly.
 
 We will do this by implementing the dispatcher in `chatroom.ListenForMessages` 
 which is designed to handle the messages on the various chatroom channels,
 and act accordingly (e.g. add or remove users from internal data structures, broadcast
-connection, disconnection, and other messages to all users).
+connection, disconnection, and other messages to all users). This dispatcher
+will run in its own goroutine constantly looking for message on its queues.
 
 So, let's go!
 
@@ -34,7 +36,7 @@ So, let's go!
   Well, the job of `chatroom.ListenForMessages` is to _listen in a loop_ for any messages on the channels in the chatroom
   object, and then handle those messages accordingly.
 
-  Let's write some that  will handle a new `ChatUser` object on the
+  Let's write some code in this function that will handle a new `ChatUser` object on the
   `joins` channel!
 
   1. In `ChatRoom.ListenForMessages`, implement the following
@@ -50,26 +52,27 @@ So, let's go!
   To do this, we need to implement `ChatRoom.Broadcast`.  This function will 
   pass a message on each of the `ChatUser.outgoing` channels (using `ChatUser.Send`).  
   
-  The idea is that each `ChatUser` will be listening on this channel for any outgoing messages,
-  and call `ChatUser.WriteString()` to write that message to the socket.
+  The idea is that each `ChatUser` will be listening on this channel for any outgoing messages  via the `ChatUser.WriteOutgoingMessages` 
+  function. This function  runs in a loop in a goroutine, and calls `ChatUser.WriteString()` to write that message to the socket when it sees a new message on the `outgoing channel`.
 
   1. :star2: Implement `ChatUser.Send` to place a message on the `chatuser.outgoing` channel.
     
      [Stuck on any of the steps above? Ask your TA, or see the solution!](code/05-handle-joins/chat.go)
 
+  1. :star2: Implement `ChatUser.WriteOutgoingMessages` by: 
 
-    1. :star2: Create a loop that constantly reads a msg from the `chatuser.outgoing` channel. 
-    1. :star2: Add a newline to this msg 
-    1. :star2: Write the msg to the socket using `chatuser.WriteString`
+    1. :star2: Creating a loop that constantly reads a msg from the `chatuser.outgoing` channel; 
+    1. :star2: Adding a newline to this msg;
+    1. :star2: Write the msg to the socket by calling `chatuser.WriteString`.
 
     [Stuck on any of the steps above? Ask your TA, or see the solution!](code/05-handle-joins/chat.go)
   
-  4. :star2: At the end of `ChatUser.Login`, call `cu.WriteOutgoingMessages` loop and make 
+  4. :star2: Let's start the outgoing message listener! At the end of `ChatUser.Login`, call `cu.WriteOutgoingMessages` loop and make 
   sure it runs in a goroutine.
 
     [Stuck on any of the steps above? Ask your TA, or see the solution!](code/05-handle-joins/chat.go)
 
-. Now that this is all setup, let's broadcast a message whenever the chatroom
+1. Now that this is all setup, let's broadcast a message whenever the chatroom
 sees a new user login.
 
   1. :star2: Modify `ChatRoom.ListenForMessages` to broadcast a message whenever
