@@ -24,9 +24,9 @@ on each connection.  Find the section of the code `ChatRoom.Join`
   ```
 
   1. In `ChatRoom.Join`, do the following: 
-    * Create a new `ChatUser` object that accepts the connection
-    * Call `ChatUser.Login` on this connection (and verify there is no error)
-    * Notify of a new user by putting the newly created `ChatUser` on the `ChatRoom.joins` channel. 
+    * Create a new `ChatUser` object using `NewChatUser` 
+    * Call `ChatUser.Login` on this object (and verify there is no error)
+    * Notify of a new user by putting the newly created `ChatUser` object on the `ChatRoom.joins` channel. 
     Don't worry about how this is used for now, I'll show you how we consume it later.
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
