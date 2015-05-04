@@ -113,4 +113,20 @@ username and store it on the `ChatUser.username` field.
       Welcome, funcuddles
       ```
 
+1. One more thing!  when you call `chatroom.Join` in `main.go`, what
+happens if more than one client tries to connect?
+
+  ```go main.go
+  for {
+  		conn, _ := listener.Accept()
+  		log.Println("Connection joined.", conn.RemoteAddr())
+  		chatroom.Join(conn)
+  	}
+  ```
+  
+  Hint: only one thing can be connecting at a time! 
+
+  How can you fix this?
+  
+
 [Proceed to Lesson 5](04-user-struct.md)

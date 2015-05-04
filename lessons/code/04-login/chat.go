@@ -154,6 +154,9 @@ func main() {
 	for {
 		conn, _ := listener.Accept()
 		log.Println("Connection joined.", conn.RemoteAddr())
-		chatroom.Join(conn)
+
+		// run this in a goroutine so more than one thing
+		// can connect
+		go chatroom.Join(conn)
 	}
 }
