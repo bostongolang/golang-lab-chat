@@ -103,15 +103,8 @@ func (cu *ChatUser) WriteOutgoingMessages(chatroom *ChatRoom) {
 	go func() {
 		for {
 			data := <-cu.outgoing
-			if cu.disconnect {
-				break
-			}
 			data = data + "\n"
 			err := cu.WriteString(data)
-			if err != nil {
-				chatroom.Logout(cu.username)
-				break
-			}
 		}
 	}()
 }
