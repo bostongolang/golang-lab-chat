@@ -34,7 +34,7 @@ on each connection.  Find the section of the code `ChatRoom.Join`
 1. Great! Now let's start implementing `ChatUser.Login`.  First, let's create a 
 helpful banner that says "Welcome to [foo's] server", where `foo` is your name.
 
-  1. Find `ChatUser.Login` and call `cu.WriteString` with your banner message. 
+  1. :star2: Find `ChatUser.Login` and edit it to call `cu.WriteString` with your banner message. 
     Make sure you also write the newline.
 
     Here's what it should look like: 
