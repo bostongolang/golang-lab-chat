@@ -1,8 +1,8 @@
-# Lesson 7 - Notify When Users Logout
+# Lesson 7 - Notify When Users Disconnect 
 
 ## Goals
 
-We know when users login, we send and receive chatroom messages.. but how do we know when users logout?  
+We know when users login, we send and receive chatroom messages.. but how do we know when users disconnect?  
 
 Let's write some code to handle disconnects and display a message
 `*** [username] disconnected` when a socket disconnects.
