@@ -6,9 +6,9 @@ Finally.  Let's start reading and writing some data from the socket.
 
 In this exercise, we will:
 
- * Create a new `ChatUser` object for the connection by implementing `ChatRoom.Join`
+ * Print a banner when the user connects. 
  * Implement `ChatUser.Login` (and some related functions) to be able to read
- a username from the socket.
+ a username from the user.
 
 Btw: To test your server, you can use `nc localhost 6677` or `telnet localhost 6677`.
 
