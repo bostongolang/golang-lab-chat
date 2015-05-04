@@ -6,11 +6,13 @@ The goal of the portion is to setup project `chat-server` which will
 hold the code for your chat project. 
 
 In the interest of time, we will all organize our chat server around the following
-data structures which we have scaffolded for you.
+data structures which we have scaffolded for you in [chat.go](code/01-setup/chat.go).
 
  * a `ChatUser` struct to handle the individual chat connection for the user.
  * a `ChatRoom` struct to handle all of the connections, chatroom messages, and disconnects.
  * a `main` function that will be the entry point of your code.
+
+We will walk through populating all of these to create the chat server in later lessons.
 
 ## Steps
 
@@ -22,7 +24,6 @@ this repository, and a file `chat.go` that will contain the code.
     ```bash
     mkdir -p chat-server
     cd chat-server
-    touch chat.go
     ```
 
   tip: If you are using Vagrant, this will 'appear' in `/opt/golang-lab-chat/chat-server`.
@@ -38,34 +39,20 @@ this repository, and a file `chat.go` that will contain the code.
     * users disconnecting;
     * receiving individual messages from users and broadcasting (relaying) them to other users.
 
-    ```go
-    type ChatRoom struct {
-      // TODO: populate this  
-    }
+  1. Review the struct `ChatUser`.  This struct will handle
+    * reading lines of data from the user socket and notifying 
+    the chatroom there is a new messages
+    * writing data back to the socket (e.g messages from other users) 
 
-    // NewChatRoom will create a chatroom
-    func NewChatRoom() *ChatRoom {
-      // TODO: return a chatroom
-      return nil 
-    }
-
-    
-    func (cr *ChatRoom) ListenForMessages() {}
-    func (cr *ChatRoom) Logout(username string) {}
-    func (cr *ChatRoom) Join(conn net.Conn) {}
-    func (cr *ChatRoom) Broadcast(msg string) {}
-    ```
-
-  1. Review the struct 
-
-1. Ensure the code runs by typing `go run chat.go` 
+1. Ensure the code runs by typing `go run chat.go`. You should see a message about the chat server starting. 
 
   ```bash
-  cd /opt/golang-lab-chat # if using vagrant
-  go run chat.go
+  $ cd /opt/golang-lab-chat # if using vagrant
+  $ go run chat.go
+  2015/05/03 20:13:42 Chat server starting!
   ```
 
-[See the solution!](code/01-setup/chat.go)
+[Get the solution](code/01-setup/chat.go)
 
 [Proceed to Lesson 2](02-socket.md)
 
