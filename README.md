@@ -63,6 +63,6 @@ implemented, we have provided all of the working code examples.
 1. [Handling user logins](lessons/04-login.md)
 1. [Notifying when users join](lessons/05-handle-joins.md)
 1. [Broadcasting chat messages](lessons/06-broadcast-msgs.md)
-1. Notifying when users logout
+1. [Notifying when users logout](lessons/07-logouts.md)
 1. Extra credit!!
 
