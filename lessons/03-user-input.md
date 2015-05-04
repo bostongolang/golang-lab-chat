@@ -23,7 +23,7 @@ accept connections:
 ```
 
 1. Above the `main` function, create an empty function `func handleConnection(conn net.Conn)` that
-will handle the connection.
+will handle the connection received by `listener.Accept`.
   
   Right after you accept the connection and print the 
   'Connection joined' message, call your new function `handleConnection(conn)`.
@@ -68,4 +68,4 @@ Welcome, jen
 [Stuck on any of the steps above? See the solution!](code/03-user-input/chat.go)
 
 
-[Proceed to Lesson 4](04-user-struct.md)
+[Proceed to Lesson 4](04-data-structures.md)
