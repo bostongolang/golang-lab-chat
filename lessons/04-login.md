@@ -1,4 +1,4 @@
-# Lesson 4 - Login to the chat server! (Time: 15 minutes)
+# Lesson 4 - Login to the chat server! (15-20 minutes)
 
 ## Goals
 

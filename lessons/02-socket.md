@@ -26,7 +26,7 @@ listen for connections.
   
   [Docs for the net package and example are here](http://golang.org/pkg/net/)
   
-  [Stuck on any of the steps above? See the solution!](code/02-socket/chat.go)
+  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/02-socket/chat.go)
 
 1. Run the server using `go run chat.go`.  It should wait after the "Chat server starting!" message. 
 You can stop the server using CTRL-C.
