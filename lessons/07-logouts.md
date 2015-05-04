@@ -43,7 +43,6 @@ have errors reading or writing from the socket.
     
     1. :star2: If cu.ReadLine() returns an error, do not write a message to the queue. Instead,
     call `chatroom.Logout` with the current username.
-    put the current username on the `chatroom.disconnects` channel.
     1. :star2: Add some logic that checks if `cu.disconnect` is set, then exit the loop.
   
     [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go)
