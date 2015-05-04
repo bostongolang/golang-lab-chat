@@ -63,4 +63,4 @@ As we fill out the rest of the code, you will gain a better understanding of wha
 
 1. Verify the code still runs when you type `go run chat.go`.
 
-[Next, proceed to Lesson 4 - where we actually read something from the user socket!](04-user-input.md)
+[Next, proceed to Lesson 4 - where we actually read something from the user socket!](04-login.md)
