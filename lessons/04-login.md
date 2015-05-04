@@ -55,7 +55,7 @@ helpful banner that says "Welcome to [foo's] server", where `foo` is your name.
     }
     ```
 
-  1. Implement the code in WriteString that will write the `msg` to the `writer`.
+  1. :star2: Implement the code in `WriteString` that will write the `msg` to the `writer`.
   *Make sure you call `writer.Flush`*.
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
@@ -86,15 +86,16 @@ username and store it on the `ChatUser.username` field.
     }
     ```
 
-    1. Implement the code that calls `cu.reader.ReadLine` and returns the results as a string.
+    1. :star2: Implement the code that calls `cu.reader.ReadLine` and returns the results as a string.
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
   1. Go back to the `ChatUser.Login` function.  
 
-    1. After you print the banner, write some code that will print to the socket "Please enter your username:"
-    1. Implement the code that will read the username from the socket using `cu.ReadLine`
-    1. Implement code that will echo back to the socket "Welcome, [username]".
+  
+    1. :star2: After you print the banner, write some code that will print to the socket "Please enter your username:"
+    1. :star2: Implement the code that will read the username from the socket using `cu.ReadLine`
+    1. :star2: Implement code that will echo back to the socket "Welcome, [username]".
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
