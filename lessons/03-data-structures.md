@@ -25,12 +25,12 @@ Let's review the design of the data structures and some of the requirements:
   }
   ```
   
-  1. Add to the `ChatRoom` struct:
+  1. :star2: Add to the `ChatRoom` struct:
     * a private member `users` of type `map[string]*ChatUser`
     * a private member channel `incoming` of type `chan string`
     * a private member channel `joins` of type `chan *ChatUser`
     * a private member channel `disconnects` of type `chan string`
-  1. Initialize all of these data structures in the `NewChatRoom()` constructor.
+  1. :star2: Initialize all of these data structures in the `NewChatRoom()` constructor.
 
   [Stuck on any of the steps above? See the solution!](code/03-data-structures/chat.go)
 
@@ -42,14 +42,14 @@ Let's review the design of the data structures and some of the requirements:
   }
   ```
   
-  1. Add to the `ChatUser` struct
+  1. :star2: Add to the `ChatUser` struct
     * a private member `conn` of type `net.Conn` 
     * a private member `disconnect` of type `bool` 
     * a private member `username` of type `string` 
     * a private member channel `outgoing` of type `chan string` 
     * a private member `reader` of type `*bufio.Reader` 
     * a private member `writer` of type `*bufio.Writer` 
-  1. Initialize all of these data structures in the `NewChatRoom()` constructor.
+  1. :star2: Initialize all of these data structures in the `NewChatRoom()` constructor.
     * `bufio.NewReader/bufio.NewWriter` should accept the `conn` to create the `reader`
     and `writer` variables.
     * `disconnect` should be initially set to false

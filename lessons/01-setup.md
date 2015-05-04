@@ -31,7 +31,7 @@ this repository, and a file `chat.go` that will contain the code.
   system, so any changes you make will be reflected.
 
 
-1. Download the basic scaffold code [chat.go](code/01-setup/chat.go), and put it in the `chat-server` folder.  Open `chat.go` with your favorite code editor.
+1. :star2: Download the basic scaffold code [chat.go](code/01-setup/chat.go), and put it in the `chat-server` folder.  Open `chat.go` with your favorite code editor.
 
   1. Review the struct `ChatRoom`.  This struct will handle 
     
