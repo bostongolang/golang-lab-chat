@@ -2,8 +2,8 @@
 
 ## Goals
 
-The goal of this lesson is to create a TCP socket that your chat
-server will listen for connections.
+The goal of this lesson is to create a TCP server on port 6677 that will
+listen for connections.
 
 ## Steps
 
@@ -30,4 +30,4 @@ server will listen for connections.
 1. Run the server using `go run chat.go`.  It should wait after the "Chat server starting!" message. 
 You can stop the server using CTRL-C.
 
-[Proceed to Lesson 3](03-user-input.md)
+[Proceed to Lesson 3](03-data-structures.md)
