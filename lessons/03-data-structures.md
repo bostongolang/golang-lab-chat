@@ -21,7 +21,7 @@ In this lesson, we'll setup the ChatRoom and ChatUser structs.
     * a private member channel `disconnects` of type `chan string`
   1. Initialize all of these data structures in the `NewChatRoom()` constructor.
 
-[Stuck on any of the steps above? See the solution!](code/03-data-structures/chat.go)
+  [Stuck on any of the steps above? See the solution!](code/03-data-structures/chat.go)
 
 1. Find the `ChatUser` struct in `chat.go`.
 
@@ -43,7 +43,7 @@ In this lesson, we'll setup the ChatRoom and ChatUser structs.
     and `writer` variables.
     * `disconnect` should be initially set to false
 
-[Stuck on any of the steps above? See the solution!](code/03-data-structures/chat.go)
+  [Stuck on any of the steps above? See the solution!](code/03-data-structures/chat.go)
 
 1. Review these member variables and ponder their roles.  As we fill out the rest of the code,
 you will gain a better understanding of what they will be used for, or you can ask your TA for more information.
