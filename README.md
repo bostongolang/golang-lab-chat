@@ -52,13 +52,17 @@ the Boston Golang Slack group #lab-help channel group by signing up [here](http:
 You can also email me directly: [jandre+bostongolang@gmail.com](mailto:jandre+bostongolang@gmail.com).
 
 
-## Organization
+## Lessons - Table of contents 
 
 This lab is organized into the following steps -- if you ever need to 'cheat' and see an example of how the code is
 implemented, we have provided all of the working code examples.
 
-1. Setting up your Go project
-1. Creating a TCP server
-1. Writing to the socket: creating your server banner
-1. Reading the username and storing in a user struct 
-1. Creating a structure for the chatroom
+1. [Setting up your Go project](lessons/01-setup.md)
+1. [Running the TCP server](lessons/02-socket.md)
+1. [Populating our data structures](lessons/03-data-structures.md)
+1. [Handling user logins](lessons/04-login.md)
+1. [Notifying when users join](lessons/05-handle-joins.md)
+1. [Broadcasting chat messages](lessons/06-broadcast-msgs.md)
+1. Notifying when users logout
+1. Extra credit!!
+

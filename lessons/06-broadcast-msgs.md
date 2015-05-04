@@ -72,7 +72,7 @@ Got it?? Not sure? No worries, Let's go through the steps.
   }
   ```
   
-1. Verify everything works as designed.  Type a message and
+1. Verify everything works as designed.  Connect to port 6677, then type a message and
 hit enter to send a chat msg to everyone. You can try connecting with 
 multiple simultaneous clients to test how messages look to other users.
 
@@ -86,4 +86,4 @@ multiple simultaneous clients to test how messages look to other users.
    [funcuddles] hello this is dog
    ```
 
-[Logging out?](07-logouts.md)
+[Next lesson - Report disconnects](07-disconnects.md)
