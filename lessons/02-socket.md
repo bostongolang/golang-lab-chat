@@ -29,4 +29,6 @@ listen for connections.
 1. Run the server using `go run chat.go`.  It should wait after the "Chat server starting!" message. 
 You can stop the server using CTRL-C.
 
+1. To test your server connection, you can use `nc localhost 6677` or `telnet localhost 6677` (the server will accept the connection, but it won't respond to messages - we still need to write the code for that!).
+
 [Proceed to Lesson 3](03-data-structures.md)

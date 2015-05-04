@@ -11,7 +11,7 @@ In this exercise, we will:
  * Implement `ChatUser.Login` (and some related functions) to be able to read
  a username from the user.
 
-Btw: To test your server, you can use `nc localhost 6677` or `telnet localhost 6677`.
+Reminder: To test your server, you can use `nc localhost 6677` or `telnet localhost 6677`.
 
 ## Steps
 
