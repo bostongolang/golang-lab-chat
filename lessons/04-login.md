@@ -55,10 +55,10 @@ helpful banner that says "Welcome to [foo's] server", where `foo` is your name.
     }
     ```
 
-  1. :star2: Implement the code in `WriteString` that will write the `msg` to the `writer`.
-  *Make sure you call `writer.Flush`*.
+    1. :star2: Implement the code in `WriteString` that will write the `msg` to the `writer`.
+    *Make sure you call `writer.Flush`*.
 
-    [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
+     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
   1. Start the server using `go run chat.go`. Test this using the `telnet` or `nc` tool
   to connect to port `6677`.
