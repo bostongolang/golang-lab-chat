@@ -2,7 +2,18 @@
 
 ## Goals
 
-In this lesson, we'll setup the ChatRoom and ChatUser structs.
+In this lesson, we'll setup the ChatRoom and ChatUser structs. 
+
+Let's review the design of the data structures and some of the requirements:
+
+  1. There is one `ChatRoom` in the app.
+  1. The `ChatRoom` must know about all of the active connections.
+  1. Each connection is tracked in a `ChatUser` object.
+  1. The `ChatRoom` must be able to receive messages from a single connection,
+  and replay it back to the other connections.  Otherwise, it will not be a very
+  good chatroom!
+  1. When a new connection is established, the `ChatRoom` must be notified
+  of these new connections.
 
 ## Steps
 
@@ -45,11 +56,11 @@ In this lesson, we'll setup the ChatRoom and ChatUser structs.
 
   [Stuck on any of the steps above? See the solution!](code/03-data-structures/chat.go)
 
-1. Review these member variables and ponder their roles.  As we fill out the rest of the code,
-you will gain a better understanding of what they will be used for, or you can ask your TA for more information.
+1. Don't worry too much about what all of these variables are for right now.
+As we fill out the rest of the code, you will gain a better understanding of what they will be used for, or you can ask your TA for more information.
 
   [You can also view the comments on the structs here](code/03-data-structures/chat.go).
 
 1. Verify the code still runs when you type `go run chat.go`.
 
-[Proceed to Lesson 4](04-user-input.md)
+[Next, proceed to Lesson 4 - where we actually read something from the user socket!](04-user-input.md)
