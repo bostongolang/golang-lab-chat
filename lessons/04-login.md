@@ -1,8 +1,9 @@
-# Read user input from socket! (Time: 15 minutes)
+# Lesson 4 - Login to the chat server! (Time: 15 minutes)
 
 ## Goals
 
-Finally.  Let's start reading and writing some data from the socket.
+When a user logs in to our chat server, we need to know who they are.
+And they will want to know who we are.
 
 In this exercise, we will:
 
