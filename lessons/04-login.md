@@ -90,12 +90,12 @@ username and store it on the `ChatUser.username` field.
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
-  1. Go back to the `ChatUser.Login` function.  
+  1. Go back to the `ChatUser.Login` function.  After you print the banner, write some code that:
 
   
-    1. :star2: After you print the banner, write some code that will print to the socket "Please enter your username:"
-    1. :star2: Implement the code that will read the username from the socket using `cu.ReadLine`
-    1. :star2: Implement code that will echo back to the socket "Welcome, [username]".
+    1. :star2: Will print to the socket "Please enter your username:";
+    1. :star2: Read the username from the socket using `cu.ReadLine`;
+    1. :star2: And write back to the socket "Welcome, [username]".
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
