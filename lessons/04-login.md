@@ -99,19 +99,18 @@ username and store it on the `ChatUser.username` field.
 
     [Stuck on any of the steps above? See the solution!](code/04-login/chat.go)
 
-  1. Now attempt to `telnet localhost 6677` and see your username being read! 
-  You should see something like this:
+    Here is what is should look like when you connect via  `telnet localhost 6677`: 
 
-     ```bash
-    $ telnet localhost 6677                                                                                                                      ~ 1 ↵
-    Trying ::1...
-    telnet: connect to address ::1: Connection refused
-    Trying 127.0.0.1...
-    Connected to localhost.
-    Escape character is '^]'.
-    Welcome to Jen's chat server!
-    Please enter your username: funcuddles
-    Welcome, funcuddles
-    ```
+       ```bash
+      $ telnet localhost 6677                                                                                                                      ~ 1 ↵
+      Trying ::1...
+      telnet: connect to address ::1: Connection refused
+      Trying 127.0.0.1...
+      Connected to localhost.
+      Escape character is '^]'.
+      Welcome to Jen's chat server!
+      Please enter your username: funcuddles
+      Welcome, funcuddles
+      ```
 
 [Proceed to Lesson 5](04-user-struct.md)
