@@ -64,5 +64,5 @@ implemented, we have provided working code examples for each section.
 1. [Notifying when users join](lessons/05-handle-joins.md)
 1. [Broadcasting chat messages](lessons/06-broadcast-msgs.md)
 1. [Notifying when users logout](lessons/07-logouts.md)
-1. Extra credit!!
+1. [Extra credit!!](lessons/08-extra-credit.md)
 
