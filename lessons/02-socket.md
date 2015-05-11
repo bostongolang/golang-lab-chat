@@ -14,7 +14,7 @@ listen for connections.
     hint: Use the `net.Listen` function [docs here](http://golang.org/pkg/net/#Listen) 
     to create a listener that binds to TCP port `6677`.  
 
-  1. :star2: Create a new instance of the chatroom using NewChatRoom() and call
+  1. :star2: Create a new instance of the chatroom using `NewChatRoom()` and call
   `chatroom.ListenForMessages()`
   
   1. :star2: Write some code that will loop listen for accepted connections on port

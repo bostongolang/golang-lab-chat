@@ -5,7 +5,7 @@
 Finally, to the heart of the matter! Chatting!
 
 To chat with each other, we need to be able to read messages from each 
-individual ChatUser's socket, then broadcast them back to all of the other user
+individual `ChatUser`'s socket, then broadcast them back to all of the other user
 sockets.  
 
 Here's how it will work:
@@ -23,7 +23,7 @@ Got it?? Not sure? No worries, Let's go through the steps.
 ## Steps
 
 
-1. Look for the empty `ChatUser.ReadIncomingMessages` function. Let's implement it.
+1. Look for the empty `ChatUser.ReadIncomingMessages` function. Let's implement it so it constantly reads incoming messages from the socket buffer.
 
   ```go
     func (cu *ChatUser) ReadIncomingMessages(chatroom *ChatRoom) {
@@ -37,22 +37,22 @@ Got it?? Not sure? No worries, Let's go through the steps.
     1. :star2: Prepend the incoming msg with the username surrounded by brackets, e.g.: `msg = "[" + cu.username "]" + msg`
     1. :star2: Place this modified message on the `chatroom.incoming` queue.
    
-    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/06-broadcast-msgs/chat.go)
+    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/06-broadcast-msgs/chat.go#L100-L109)
 
   1. Now, you need to make sure that the `ReadIncomingMessages` goroutine is started
   in `ChatUser.Login`.  
     
     1. :star2: Modify the `Login` function to start the goroutine for `ReadIncomingMessages` after `WriteOutgoingMessages`.
 
-    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/06-broadcast-msgs/chat.go)
+    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/06-broadcast-msgs/chat.go#L138)
 
 1. Cool. Remember `ChatRoom.ListenForMessages()`?  Let's modify it so it sees
-  the new messages on the `chatroom.incoming` queue.
+  the new messages on the `chatroom.incoming` channel.
 
-  1. :star2: Add a 'case' within the `for/select` loop that reads a msg string
-  1. :star2: Call `ChatRoom.Broadcast` to broadcast the read msg.
+  1. :star2: Add a 'case' within the `for/select` loop that reads a msg string from the `incoming` channel.
+  1. :star2: Call `ChatRoom.Broadcast` on the read msg.
     
-  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/06-broadcast-msgs/chat.go)
+  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/06-broadcast-msgs/chat.go#L40-L41)
 
   At the end it will look like:
 
