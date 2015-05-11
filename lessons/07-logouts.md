@@ -16,9 +16,9 @@ that the socket has been disconnected.
 ## Steps
 
 1. Find the `ChatRoom.Logout` function. Add some code that does the following:
-  1. :star2: Send the provided `username` to the `cr.disconnects` channel.
+  1. :star2: Send the supplied `username` to the `cr.disconnects` channel.
 
-  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go)
+  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go#L59-L61)
 
 1. Update the `ListenForMessages` loop to handle messages on `cr.disconnects`:
   1. :star2: Add a `case` statement that reads the `username` from `cr.disconnects`
@@ -26,7 +26,7 @@ that the socket has been disconnected.
     1. :star2: call `Close()` on the `ChatUser` object and remove it from the map.
     1. :star2: call `Broadcast` to send a message: _`*** [username] has disconnected`_
 
-  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go)
+  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go#L45-L54)
 
 1. Now that we have `Logout` implemented, let's call `Logout` whenever the ChatUser read and write loops
 have errors reading or writing from the socket. 
@@ -37,7 +37,7 @@ have errors reading or writing from the socket.
     Instead, call `chatroom.Logout` with the current username.
     1. :star2: Add some logic that checks if `cu.disconnect` is set, then exit the loop.
   
-    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go)
+    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go#L115-L121)
 
   1. Update `ChatUser.WriteOutgoingMessages` so that: 
     
@@ -45,7 +45,7 @@ have errors reading or writing from the socket.
     call `chatroom.Logout` with the current username.
     1. :star2: Add some logic that checks if `cu.disconnect` is set, then exit the loop.
   
-    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go)
+    [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go#L133-L141)
 
 1. Finally, let's implement `ChatUser.Close`.  This will set the `disconnect` variable and close the socket.
 
@@ -55,9 +55,9 @@ have errors reading or writing from the socket.
   }
   ```
   1. :star2: In `Close()`, set `ChatUser.disconnect = true`
-  1. :star2: call Close() on the `ChatUser.conn` object
+  1. :star2: Close the `ChatUser.conn`
   
-  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go)
+  [Stuck on any of the steps above? Ask your TA, or see the solution!](code/07-logouts/chat.go#L184-L187)
 
 1. Now when a user disconnects, you'll see a disconnect message!
   ```bash
