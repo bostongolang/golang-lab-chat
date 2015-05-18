@@ -49,7 +49,7 @@ Let's review the design of the data structures and some of the requirements:
     * a private member channel `outgoing` of type `chan string` 
     * a private member `reader` of type `*bufio.Reader` 
     * a private member `writer` of type `*bufio.Writer` 
-  1. :star2: Initialize all of these data structures in the `NewChatRoom()` constructor.
+  1. :star2: Initialize all of these data structures in the `NewChatUser()` constructor.
     * `bufio.NewReader/bufio.NewWriter` should accept the `conn` to create the `reader`
     and `writer` variables.
     * `disconnect` should be initially set to false
