@@ -32,7 +32,7 @@ Got it?? Not sure? No worries, Let's go through the steps.
   ```
   1. In `ChatUser.ReadIncomingMessages`, implement the following:
 
-    1. :star2: Create a `for/select` loop, and ensure this loop runs in a goroutine.
+    1. :star2: Create a `for` loop, and ensure this loop runs in a goroutine.
     1. :star2: In the loop, call `cu.ReadLine` to read an incoming msg.
     1. :star2: Prepend the incoming msg with the username surrounded by brackets, e.g.: `msg = "[" + cu.username "]" + msg`
     1. :star2: Place this modified message on the `chatroom.incoming` queue.
